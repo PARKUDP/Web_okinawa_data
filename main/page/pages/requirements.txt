@@ -70,7 +70,7 @@ pandas==2.2.0
 paramiko==2.9.3
 pexpect==4.8.0
 pillow==10.2.0
-pip==22.0.2
+pip==23.3.2
 pipenv==11.9.0
 platformdirs==2.5.1
 powerline-status==2.8.2
