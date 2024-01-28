@@ -12,7 +12,7 @@ def update_data():
     
 # データ取得関数
 def get_data():
-    df = pd.read_csv("../data/medicalcare.csv")
+    df = pd.read_csv("data/medicalcare.csv")
     return df
 
 # 医療機関をテーブルで表示する関数

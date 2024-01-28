@@ -4,7 +4,7 @@ import json
 
 # 医療関連のデータのキーを取得する関数
 def medical_key():
-    read_file = pd.read_csv("../data/key.csv")
+    read_file = pd.read_csv("data/key.csv")
     medical_data = read_file['医療']
     medical_data.fillna("None", inplace=True)
     medical_data_list = medical_data.tolist()
@@ -13,7 +13,7 @@ def medical_key():
 
 # 避難場所のデータのキーを取得する関数
 def hinann_key():
-    read_file = pd.read_csv("../data/key.csv")
+    read_file = pd.read_csv("data/key.csv")
     hinann_data = read_file['避難']
     hinann_data.fillna("None", inplace=True)
     hinann_data_list = hinann_data.tolist()
@@ -22,7 +22,7 @@ def hinann_key():
 
 # 文化のデータのキーを取得する関数
 def culture_key():
-    read_file = pd.read_csv("../data/key.csv")
+    read_file = pd.read_csv("data/key.csv")
     culture_data = read_file['文化']
     culture_data.fillna("None", inplace=True)
     culture_data_list = culture_data.tolist()
@@ -32,7 +32,7 @@ def culture_key():
 
 # 避難場所のデータのキーを取得する関数
 def Aed_key():
-    read_file = pd.read_csv("../data/key.csv")
+    read_file = pd.read_csv("data/key.csv")
     Aed_data = read_file['AED']
     Aed_data.fillna("None", inplace=True)
     Aed_data_list = Aed_data.tolist()
@@ -53,27 +53,18 @@ def main(zyouki):
     if(zyouki == "medicalcare"):
         resources = medical_key()
         data = get_data(resources, "medicalcare")
-        data.to_csv("../data/medicalcare.csv", index=False)
+        data.to_csv("data/medicalcare.csv", index=False)
     elif(zyouki == "hinann"):
         resources = hinann_key()
         data = get_data(resources, "hinann")
-        data.to_csv("../data/hinann.csv", index=False)
+        data.to_csv("data/hinann.csv", index=False)
 
     elif(zyouki == "culture"):
         resources = culture_key()
         data = get_data(resources, "culture")
-        data.to_csv("../data/culture.csv", index=False)
+        data.to_csv("data/culture.csv", index=False)
 
     elif(zyouki == "Aed"):
         resources = Aed_key()
         data = get_data(resources, "Aed")
-        data.to_csv("../data/Aed.csv", index=False)
-    
-def test():
-    main("medicalcare")
-    main("hinann")
-    main("culture")
-    main("Aed")
-
-if __name__ == "__main__":
-    test()
+        data.to_csv("data/Aed.csv", index=False)
