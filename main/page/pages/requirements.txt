@@ -62,7 +62,6 @@ pexpect==4.8.0
 pillow==10.2.0
 pipenv==11.9.0
 platformdirs==2.5.1
-powerline-status==2.8.2
 protobuf==4.25.2
 psutil==5.9.0
 ptyprocess==0.7.0
