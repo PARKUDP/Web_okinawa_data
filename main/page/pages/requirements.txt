@@ -1,3 +1,4 @@
+altair==5.2.0
 ansible-base==2.10.8
 apache-libcloud==3.2.0
 apturl==0.5.2
