@@ -22,6 +22,10 @@ def home():
     if st.button("更新"):
         update_data()
     image_path = os.path.join('image', 'image.png')
+    current_dir = os.getcwd()
+    resolved_path = os.path.join(current_dir, 'image', 'image.png')
+    st.write("Current Directory:", current_dir)
+    st.write("Resolved Image Path:", resolved_path)
     st.image(image_path, caption='image')
         
 # 新しいmain関数を定義
