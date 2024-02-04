@@ -21,8 +21,9 @@ def home():
     st.write("ここでは、沖縄県のデータを分析しています。現在のところでは、データが不足しているため、避難場所、医療機関、文化財、AEDのデータを分析しています。（ちなみにデータが足りない場合も存在します。）")
     if st.button("更新"):
         update_data()
-image_path = 'image/image.png'  # 相対パス
-st.image(image_path, caption='image')
+    current_dir = os.path.dirname(__file__)
+    image_path = os.path.join(current_dir, 'image', 'image.png')
+    st.image(image_path, caption='image')
 
         
 # 新しいmain関数を定義
