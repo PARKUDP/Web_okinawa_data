@@ -20,6 +20,7 @@ def home():
     st.write("ここでは、沖縄県のデータを分析しています。現在のところでは、データが不足しているため、避難場所、医療機関、文化財、AEDのデータを分析しています。（ちなみにデータが足りない場合も存在します。）")
     if st.button("更新"):
         update_data()
+    st.image("image/image.png", caption="image")
         
 # 新しいmain関数を定義
 def main():
