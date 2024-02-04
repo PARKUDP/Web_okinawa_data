@@ -5,6 +5,9 @@ import pandas as pd
 import folium
 from streamlit_folium import st_folium
 import file_update as f
+import os
+current_dir = os.path.dirname(__file__)
+medicalcare_path = os.path.join(current_dir, 'data','medicalcare.csv')
 
 # データ更新関数
 def update_data():
@@ -12,7 +15,7 @@ def update_data():
     
 # データ取得関数
 def get_data():
-    df = pd.read_csv("data/medicalcare.csv")
+    df = pd.read_csv(medicalcare_path)
     return df
 
 # 医療機関をテーブルで表示する関数

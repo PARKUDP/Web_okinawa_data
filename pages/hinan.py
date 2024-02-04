@@ -5,6 +5,9 @@ import pandas as pd
 import folium
 from streamlit_folium import st_folium
 import file_update as f
+import os
+current_dir = os.path.dirname(__file__)
+hinann_path = os.path.join(current_dir, 'data','hinann.csv')
 
 # データ更新関数
 def update_data():
@@ -12,7 +15,7 @@ def update_data():
     
 # データ取得関数
 def get_data():
-    df = pd.read_csv("data/hinann.csv")
+    df = pd.read_csv(hinann_path)
     return df
 
 # 避難をテーブルで表示する関数

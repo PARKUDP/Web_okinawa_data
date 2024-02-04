@@ -5,6 +5,10 @@ import pandas as pd
 import folium
 from streamlit_folium import st_folium
 import file_update as f
+import os
+import os
+current_dir = os.path.dirname(__file__)
+Aed_path = os.path.join(current_dir, 'data','Aed.csv')
 
 # データ更新関数
 def update_data():
@@ -12,7 +16,7 @@ def update_data():
     
 # データ取得関数
 def get_data():
-    df = pd.read_csv("data/Aed.csv")
+    df = pd.read_csv(Aed_path)
     return df
 
 # AEDをテーブルで表示する関数
