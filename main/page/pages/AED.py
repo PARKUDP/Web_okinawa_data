@@ -12,10 +12,10 @@ def update_data():
     
 # データ取得関数
 def get_data():
-    df = pd.read_csv("../data/Aed.csv")
+    df = pd.read_csv("/data/Aed.csv")
     return df
 
-# 医療機関をテーブルで表示する関数
+# AEDをテーブルで表示する関数
 def table():
     st.title("AED一覧（テーブル）")
     st.button("更新", on_click=update_data)
@@ -34,7 +34,7 @@ def show_map(data):
         folium.Marker([row['緯度'], row['経度']], popup=row['名称']).add_to(n)
     st_data = st_folium(n, width=720, height=480)
 
-# 医療機関を地図で表示する関数
+# AEDを地図で表示する関数
 def map():
     st.title("AED（地図）")
     if st.button("更新"):
