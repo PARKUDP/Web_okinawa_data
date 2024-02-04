@@ -12,7 +12,7 @@ def update_data():
     
 # データ取得関数
 def get_data():
-    df = pd.read_csv("/data/Aed.csv")
+    df = pd.read_csv("data/Aed.csv")
     return df
 
 # AEDをテーブルで表示する関数

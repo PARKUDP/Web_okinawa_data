@@ -12,7 +12,7 @@ def update_data():
     
 # データ取得関数
 def get_data():
-    df = pd.read_csv("/data/culture.csv")
+    df = pd.read_csv("data/culture.csv")
     df = df.dropna(subset=['緯度', '経度'])
     return df
 

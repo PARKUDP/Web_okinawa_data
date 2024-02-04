@@ -12,7 +12,7 @@ def update_data():
     
 # データ取得関数
 def get_data():
-    df = pd.read_csv("/data/hinann.csv")
+    df = pd.read_csv("data/hinann.csv")
     return df
 
 # 避難をテーブルで表示する関数
