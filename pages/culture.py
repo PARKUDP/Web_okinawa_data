@@ -5,6 +5,9 @@ import pandas as pd
 import folium
 from streamlit_folium import st_folium
 import file_update as f
+import os
+current_dir = os.path.dirname(__file__)
+culture_path = os.path.join(current_dir, 'data','culture.csv')
 
 # データ更新関数
 def update_data():
@@ -12,7 +15,7 @@ def update_data():
     
 # データ取得関数
 def get_data():
-    df = pd.read_csv("data/culture.csv")
+    df = pd.read_csv(culture_path)
     df = df.dropna(subset=['緯度', '経度'])
     return df
 
