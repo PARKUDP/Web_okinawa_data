@@ -61,6 +61,16 @@ def map():
     if st.session_state.map_created:
         show_map(data)
 
+def tool():
+    st.title("地域分析")
+    st.write("ここでは、地域分析を行います。")
+    st.write("地域分析には、以下の機能があります。")
+    data = get_data()
+    st.write("・地域の文化財の数を表示")
+    st.write("・地域の文化財の数を地図で表示")
+    st.write("・地域の文化財の数をグラフで表示")
+    st.write("・地域の文化財の数を表で表示")
+    st.write("・地域の文化財の数をCSVで出力")
 # Streamlitアプリのメイン関数
 def main():
     st.sidebar.title("文化財")
@@ -71,6 +81,8 @@ def main():
         table()
     elif page == "文化財一覧（地図）":
         map()
+    elif page == "地域分析":
+        tool()
 
 # メイン関数の実行
 if __name__ == "__main__":
